@@ -1,0 +1,128 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f6ff 0%, #d5f3ff 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2933;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.identify-bug {
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  padding: 3rem 3.5rem;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+}
+
+.identify-bug h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #047857;
+}
+
+.tagline {
+  margin-bottom: 2rem;
+  color: #475569;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.file-input-label input[type='file'] {
+  padding: 0.75rem;
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.file-input-label input[type='file']:hover {
+  border-color: #0ea5e9;
+  background-color: rgba(14, 165, 233, 0.08);
+}
+
+.upload-form button {
+  background: linear-gradient(90deg, #0ea5e9, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.upload-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.upload-form button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 15px 30px -10px rgba(99, 102, 241, 0.45);
+}
+
+.result-message {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #334155;
+  min-height: 1.5rem;
+}
+
+.fun-facts {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+}
+
+.fun-facts h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #7c3aed;
+}
+
+.fun-fact {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.fact-button {
+  border: none;
+  background-color: #f97316;
+  color: white;
+  border-radius: 9999px;
+  padding: 0.65rem 1.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fact-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 25px -8px rgba(249, 115, 22, 0.45);
+}
+
+@media (max-width: 640px) {
+  .identify-bug {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .identify-bug h1 {
+    font-size: 2rem;
+  }
+}
