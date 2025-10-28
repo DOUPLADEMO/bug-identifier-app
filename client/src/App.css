@@ -1,0 +1,255 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at top, #020617 0%, #0f172a 65%, #020617 100%);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100%;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.soda-can-showcase {
+  position: relative;
+  background: rgba(15, 23, 42, 0.78);
+  border-radius: 26px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.75);
+  padding: 2.5rem;
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+}
+
+.soda-can-showcase::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 55%),
+              radial-gradient(circle at 80% 15%, rgba(129, 140, 248, 0.18), transparent 45%);
+  mix-blend-mode: screen;
+}
+
+.soda-can-header {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+  margin-bottom: 1.5rem;
+}
+
+.soda-can-header h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+  color: #f8fafc;
+}
+
+.soda-can-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.soda-can-viewport {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 480px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), rgba(15, 23, 42, 0.9));
+}
+
+.soda-can-controls {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  align-items: end;
+}
+
+.soda-can-controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #cbd5f5;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.soda-can-controls input[type='range'] {
+  width: 100%;
+  accent-color: #38bdf8;
+}
+
+.soda-can-controls button {
+  justify-self: start;
+  padding: 0.65rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.6);
+  background: linear-gradient(120deg, rgba(56, 189, 248, 0.22), rgba(129, 140, 248, 0.24));
+  color: #e0f2fe;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.soda-can-controls button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(59, 130, 246, 0.35);
+}
+
+.soda-can-controls button:active {
+  transform: translateY(1px);
+}
+
+.soda-can-tips {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.25rem;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.soda-can-tips strong {
+  color: #f8fafc;
+}
+
+.identify-bug-card {
+  background: rgba(15, 23, 42, 0.72);
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 2rem;
+  box-shadow: 0 24px 70px rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(14px);
+}
+
+.identify-bug-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  color: #f8fafc;
+}
+
+.identify-bug-description {
+  margin: 0 0 1.75rem;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.identify-bug-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.file-input-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 18px;
+  background: rgba(30, 64, 175, 0.35);
+  border: 1px dashed rgba(56, 189, 248, 0.6);
+  color: #bfdbfe;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.file-input-label:hover {
+  border-color: rgba(129, 140, 248, 0.7);
+  background: rgba(30, 64, 175, 0.45);
+}
+
+.file-input-label input[type='file'] {
+  display: none;
+}
+
+.identify-bug-form button {
+  align-self: flex-start;
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(120deg, rgba(56, 189, 248, 0.9), rgba(14, 165, 233, 0.9));
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.identify-bug-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+.identify-bug-form button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+}
+
+.identify-bug-result {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: 18px;
+  background: rgba(30, 41, 59, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #e0f2fe;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .soda-can-showcase {
+    padding: 2rem 1.5rem 2.25rem;
+  }
+
+  .soda-can-viewport {
+    height: 360px;
+  }
+
+  .soda-can-controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .soda-can-showcase {
+    padding: 1.75rem 1.25rem 2rem;
+  }
+
+  .soda-can-viewport {
+    height: 320px;
+  }
+}
